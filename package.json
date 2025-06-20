@@ -1,4 +1,8 @@
 {
   "name": "netlify-app",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "dependencies": {
+    "@hubspot/api-client": "^13.0.0",
+    "dotenv": "^16.5.0"
+  }
 }
