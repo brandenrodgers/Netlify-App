@@ -145,6 +145,21 @@ body {
   transform: translateY(0);
 }
 
+.button-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #6c757d, #495057);
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+}
+
 .output {
   margin-top: 20px;
   padding: 20px;
@@ -223,6 +238,14 @@ body {
   .btn {
     width: 100%;
     padding: 15px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .btn-secondary {
+    margin-top: 0;
   }
 }
 

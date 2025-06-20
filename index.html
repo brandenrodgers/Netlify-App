@@ -20,9 +20,14 @@
           Weather Service
         </h2>
         <p>Get real-time weather information from our integrated weather API.</p>
-        <button id="call-weather-btn" class="btn" aria-label="Get current weather information">
-          Get Weather
-        </button>
+        <div class="button-group">
+          <button id="call-weather-btn" class="btn" aria-label="Get current weather information">
+            Get Weather
+          </button>
+          <button class="btn btn-secondary" onclick="window.open('/.netlify/functions/weather', '_blank')" aria-label="Open weather function in new tab">
+            Open Function
+          </button>
+        </div>
         <div id="weather-output" class="output" role="region" aria-live="polite" aria-label="Weather results"></div>
       </section>
 
@@ -34,9 +39,14 @@
           HubSpot Contacts
         </h2>
         <p>Retrieve and manage your HubSpot contacts seamlessly.</p>
-        <button id="get-contacts-btn" class="btn" aria-label="Get HubSpot contacts">
-          Get Contacts
-        </button>
+        <div class="button-group">
+          <button id="get-contacts-btn" class="btn" aria-label="Get HubSpot contacts">
+            Get Contacts
+          </button>
+          <button class="btn btn-secondary" onclick="window.open('/.netlify/functions/contacts', '_blank')" aria-label="Open contacts function in new tab">
+            Open Function
+          </button>
+        </div>
         <div id="contacts-output" class="output" role="region" aria-live="polite" aria-label="Contacts results"></div>
       </section>
     </main>
