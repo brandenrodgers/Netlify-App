@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Netlify GET Endpoint Demo</title>
+</head>
+<body>
+  <h1>Call the Serverless Function</h1>
+  <button id="call-btn">Say Hello</button>
+  <p id="output"></p>
+
+  <script>
+    document.getElementById('call-btn').addEventListener('click', async () => {
+      const response = await fetch('/.netlify/functions/hello');
+      const text = await response.text();
+      document.getElementById('output').textContent = text;
+    });
+  </script>
+</body>
+</html>
