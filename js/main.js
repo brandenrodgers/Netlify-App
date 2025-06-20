@@ -11,12 +11,22 @@ function resetButton(button, originalText) {
   button.innerHTML = originalText;
 }
 
-// Helper function to display results
+// Helper function to format and display results
 function displayResult(outputElement, result, isError = false) {
   if (isError) {
     outputElement.innerHTML = `<div style="color: #dc3545; font-weight: 600;">❌ Error: ${result}</div>`;
   } else {
-    outputElement.innerHTML = `<div style="color: #28a745; font-weight: 600;">✅ Success</div><pre>${result}</pre>`;
+    // Try to parse and prettify JSON
+    let formattedResult = result;
+    try {
+      const parsed = JSON.parse(result);
+      formattedResult = JSON.stringify(parsed, null, 2);
+    } catch (e) {
+      // If it's not JSON, use as is
+      formattedResult = result;
+    }
+
+    outputElement.innerHTML = `<div style="color: #28a745; font-weight: 600; margin-bottom: 10px;">✅ Success</div><pre>${formattedResult}</pre>`;
   }
 }
 
