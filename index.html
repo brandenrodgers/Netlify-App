@@ -1,21 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simple Netlify App for HubSpot Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HubSpot Netlify Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>Call the Weather function</h1>
-  <button id="call-weather-btn">Get Weather</button>
-  <p id="weather-output"></p>
+  <div class="container">
+    <header class="header">
+      <h1>HubSpot Dashboard</h1>
+      <p>Connect with your data through modern API integrations</p>
+    </header>
 
-  <hr>
+    <main>
+      <section class="section">
+        <h2>
+          <span class="icon weather-icon"></span>
+          Weather Service
+        </h2>
+        <p>Get real-time weather information from our integrated weather API.</p>
+        <button id="call-weather-btn" class="btn" aria-label="Get current weather information">
+          Get Weather
+        </button>
+        <div id="weather-output" class="output" role="region" aria-live="polite" aria-label="Weather results"></div>
+      </section>
 
-  <h1>Call the Contacts function</h1>
-  <button id="get-contacts-btn">Get Contacts</button>
-  <p id="contacts-output"></p>
+      <div class="divider"></div>
 
-  <!-- Link to your external JavaScript file -->
+      <section class="section">
+        <h2>
+          <span class="icon contacts-icon"></span>
+          HubSpot Contacts
+        </h2>
+        <p>Retrieve and manage your HubSpot contacts seamlessly.</p>
+        <button id="get-contacts-btn" class="btn" aria-label="Get HubSpot contacts">
+          Get Contacts
+        </button>
+        <div id="contacts-output" class="output" role="region" aria-live="polite" aria-label="Contacts results"></div>
+      </section>
+    </main>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 </html>
